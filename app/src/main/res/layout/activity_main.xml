@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        app:titleTextColor="#ffffff"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/ID_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:id="@+id/ID_deletion_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+
+      <ProgressBar
+          android:layout_centerHorizontal="true"
+          android:layout_above="@id/ID_deletion_txtview"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+
+          />
+
+      <TextView
+          android:textAppearance="@style/TextAppearance.AppCompat.Large"
+          tools:text="Deleting Ahmed"
+          android:id="@+id/ID_deletion_txtview"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          />
+
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+
+</FrameLayout>
